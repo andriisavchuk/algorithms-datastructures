@@ -4,24 +4,24 @@
 /*---- Inbuilt methods ----*/
 
 /*
-function reverseString (str) {
-  console.log(str);
+function reverseString(str) {
+  let splitedString = [];
+  let reversedString = '';
 
-  let splitStr = str.split('');
-  console.log(splitStr);
+  splitedString = str.split('');
+  splitedString.reverse();
+  reversedString = splitedString.join('');
 
-  let reverseArrayStr = splitStr.reverse();
-  console.log(reverseArrayStr);
-
-  let reversedStr = reverseArrayStr.join('');
-  console.log(reversedStr);
+  return reversedString;
 }
 
-let result = reverseStr('hello');
+let result = reverseString('hello world');
 console.log(result);
+*/
 
------------------------------------------
+/*---- Inbuilt methods chaining ----*/
 
+/*
 function reverseString(str) {
   return str.split('').reverse().join('');
 }
@@ -30,7 +30,7 @@ let result = reverseStr('hello');
 console.log(result);
 */
 
-/*---- for loop ----*/
+/*---- For loop ----*/
 
 /*
   1.Create an empty string that will host the new created string
@@ -53,15 +53,16 @@ console.log(result);
 
 /*
 function reverseString (str) {
-  let reversedStr = '';
-  // for (let i = str.length - 1; i >= 0; i--) {
-  //   reversedStr += str[i];
-  // }
+  let reversedString = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedString += str[i];
+  }
 
   // for (let character of str) {
-  //   reversedStr = character + reversedStr;
+  //   reversedString = character + reversedString;
+  //   console.log(reversedString);
   // }
-  // return reversedStr;
+  return reversedString;
 }
 
 let result = reverseString('apple');
