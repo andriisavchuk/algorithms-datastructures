@@ -5,12 +5,12 @@
 
 /*
 function reverseString(str) {
-  let splitedString = [];
+  let arrayOfWords = [];
   let reversedString = '';
 
-  splitedString = str.split('');
-  splitedString.reverse();
-  reversedString = splitedString.join('');
+  arrayOfWords = str.split('');
+  arrayOfWords.reverse();
+  reversedString = arrayOfWords.join('');
 
   return reversedString;
 }
@@ -113,3 +113,38 @@ function reverseString(str) {
 let result = reverseString('hello');
 console.log(result);
 */
+
+
+/*---- Reverse words in string ----*/
+
+// Given a string, return a new string with the reversed order of words
+
+
+function reverseWords(str) {
+  let arrayOfWords = [];
+  let arrayOfReversedWords = [];
+  let reversedWordsString = '';
+
+  arrayOfWords = str.split(' ');
+
+  for (const word of arrayOfWords) {
+    let reversedWord = '';
+    for (let i = word.length -1; i >= 0; i--) {
+      reversedWord += word[i];
+    }
+    arrayOfReversedWords.push(reversedWord);
+  }
+
+  arrayOfWords.forEach(word => {
+    let reversedWord = '';
+    for (let i = word.length - 1; i >= 0; i--) {
+      reversedWord += word[i];
+    }
+    arrayOfReversedWords.push(reversedWord);
+  });
+
+  return reversedWordsString = arrayOfReversedWords.join(' ');
+}
+
+let result = reverseWords('Return a new string with the reversed order of words');
+console.log(result);
