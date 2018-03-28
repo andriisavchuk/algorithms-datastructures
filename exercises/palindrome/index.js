@@ -52,6 +52,7 @@ let result = isPalindrome('abbart');
 console.log(result);
 */
 
+/*
 function isPalindrome(str) {
   let charArray = [];
   let lettersArray = [];
@@ -74,3 +75,4 @@ function isPalindrome(str) {
 
 let result = isPalindrome('Madam I`m Adam');
 console.log(result);
+*/
