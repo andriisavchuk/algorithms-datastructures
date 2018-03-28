@@ -51,3 +51,26 @@ function isPalindrome(str) {
 let result = isPalindrome('abbart');
 console.log(result);
 */
+
+function isPalindrome(str) {
+  let charArray = [];
+  let lettersArray = [];
+  let validCharacters = 'abcdefghijklmnopqrstuvwxyz';
+
+  str = str.toLowerCase();
+  charArray = str.split('');
+
+  charArray.forEach(char => {
+    if (validCharacters.indexOf(char) > -1) lettersArray.push(char);
+  });
+
+  if (lettersArray.join('') === lettersArray.reverse().join('')) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+let result = isPalindrome('Madam I`m Adam');
+console.log(result);
