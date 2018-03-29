@@ -6,8 +6,19 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(number) {
+  let reversedNumber = number
+  .toString()
+  .split('')
+  .reverse()
+  .join('');
+
+  // if (number < 0) {
+  //   return parseInt(reversedNumber) * -1;
+  // }
+
+  return parseInt(reversedNumber) * Math.sign(number);
 
 }
 
-let result = reverseInt(189);
+let result = reverseInt(-90);
 console.log(result);
