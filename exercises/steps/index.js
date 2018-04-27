@@ -11,15 +11,21 @@
 //      '###'
 
 function steps(n) {
-  let char = '#';
-  let space = ' ';
 
   for (let i = 0; i < n; i++) {
-    console.log("'" + char + "'");
-    char += char ;
-  }
+    let row = "\'";
 
+    for (let j = 0; j < n; j++) {
+      if (j <= i) {
+        row += '#';
+      } else {
+        row += ' ';
+      }
+    }
+
+    console.log(row + "\'" );
+  }
 }
 
-let result = steps(3);
+let result = steps(10);
 console.log(result);
