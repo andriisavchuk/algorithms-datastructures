@@ -24,11 +24,16 @@
   3. Return the reversed string
 */
 
+/*
 function reverseString(str) {
   let reversedString = '';
 
-  for (let i = str.length - 1; i >= 0; i--) {
-    reversedString += str[i].toLowerCase();
+  // for (let i = str.length - 1; i >= 0; i--) {
+  //   //   reversedString += str[i].toLowerCase();
+  //   // }
+
+  for (let char of str) {
+    reversedString = char + reversedString;
   }
 
   return reversedString;
@@ -36,3 +41,30 @@ function reverseString(str) {
 
 const result = reverseString('Apple');
 console.log(result);
+*/
+
+/*---- Inbuilt methods ----*/
+
+/*
+function reverseString(str) {
+  let arrayOfWords = [];
+  let reversedString = '';
+
+  arrayOfWords = str.split('');
+  arrayOfWords.reverse();
+  reversedString = arrayOfWords.join('');
+
+  return reversedString;
+}
+
+const result = reverseString('Apple from the Heaven');
+console.log(result);
+
+
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+
+const result = reverseString('Apple from the Heaven');
+console.log(result);
+*/
