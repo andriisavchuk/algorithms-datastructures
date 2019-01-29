@@ -1,2 +1,1 @@
-# Learning Algorithms and Data Structures
-
+# Algorithms and DataStructures with JS 
