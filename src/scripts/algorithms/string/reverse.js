@@ -112,3 +112,40 @@ console.log(result);
 
     The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
 */
+
+/* Reverse words in string.
+   Given a string, return a new string with the reversed order of words
+*/
+
+/*
+function reverseWords(str) {
+  let arrOfWords = [];
+  let arrOfReversedWords = [];
+  let reversedWordsString = '';
+
+  arrOfWords = str.split(' ');
+
+  for (let word of arrOfWords ) {
+    let reversedWord = '';
+    for (let i = word.length - 1; i >= 0 ; i--) {
+      reversedWord += word[i];
+    }
+
+    arrOfReversedWords.push(reversedWord);
+  }
+
+  arrOfWords.forEach(word => {
+    let reversedWord = '';
+    for (let i = word.length - 1; i >= 0; i--) {
+      reversedWord += word[i];
+    }
+    arrOfReversedWords.push(reversedWord);
+  });
+
+  return reversedWordsString = arrOfReversedWords.join(' ');
+
+}
+
+const result = reverseWords('Apple from the Heaven');
+console.log(result);
+*/
