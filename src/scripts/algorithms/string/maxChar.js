@@ -6,6 +6,7 @@
    palindrome("abg 12311111111") === "1"
 */
 
+/*
 function maxChar(str) {
   let chars = {};
   let maxValue = 0;
@@ -31,6 +32,24 @@ function maxChar(str) {
   return maxChar;
 
 }
+*/
 
-let result = maxChar("abccccccba");
+/*
+// is question about proper work of this solution
+function maxChar(str) {
+  let max = 0,
+    maxValue = '';
+
+  str.split('').forEach(function(char){
+    if(str.split(char).length > max) {
+      debugger;
+      max = str.split(char).length;
+      maxValue = char;
+    }
+  });
+  return maxValue;
+}
+
+let result = maxChar("abccbaffxccsssfxffgf");
 console.log(`Maximum chars in string have ${result}`);
+*/
