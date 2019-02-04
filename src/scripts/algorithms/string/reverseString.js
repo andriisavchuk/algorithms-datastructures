@@ -117,7 +117,7 @@ console.log(result);
    Given a string, return a new string with the reversed order of words
 */
 
-/*
+
 function reverseWords(str) {
   let arrOfWords = [];
   let arrOfReversedWords = [];
@@ -148,4 +148,3 @@ function reverseWords(str) {
 
 const result = reverseWords('Apple from the Heaven');
 console.log(result);
-*/
