@@ -3,7 +3,7 @@
 
   Examples:
    maxChar("abccccccba") === "c"
-   palindrome("abg 12311111111") === "1"
+   maxChar("abg 12311111111") === "1"
 */
 
 /*
@@ -15,7 +15,6 @@ function maxChar(str) {
   for (const char of str) {
 
     if (!chars[char]) {
-      debugger;
       chars[char] = 1;
     } else {
       chars[char]++;
