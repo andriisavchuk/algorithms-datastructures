@@ -27,14 +27,12 @@ function isAnagram (string1, string2) {
 
   return true;
 }
-*/
 
-/*
 function strToCharMap (str) {
   const charsMap = {};
 
   for (const char of str.replace(/[^\w]/g, '').toLowerCase()) {
-    charsMap[char] = charsMap[char] || 1;
+    charsMap[char] = charsMap[char] + 1 || 1;
   }
 
   return charsMap;
@@ -49,10 +47,10 @@ function cleanString(str) {
   return str
           .replace(/[^\w]/g, '')
           .toLowerCase()
-          .split()
+          .split('')
           .sort()
-          .join('');
+          .join();
 }
 
-let result = isAnagram('Hi there', 'Bye there');
+let result = isAnagram('RAIL! SAFETY!', 'fairy tales');
 console.log(result);
