@@ -10,12 +10,13 @@
     anagrams('Hi there', 'Bye there') --> False
 */
 
-/*
-function isAnagram (string1, string2) {
-  const charsMapOfStr1 = strToCharMap(string1);
-  const charsMapOfStr2 = strToCharMap(string2);
+function isAnagram1(str1, str2) {
+  const charsMapOfStr1 = strToCharMap(str1);
+  const charsMapOfStr2 = strToCharMap(str2);
 
-  if (Object.keys(charsMapOfStr1).length !== Object.keys(charsMapOfStr2).length) {
+  if (
+    Object.keys(charsMapOfStr1).length !== Object.keys(charsMapOfStr2).length
+  ) {
     return false;
   }
 
@@ -28,7 +29,7 @@ function isAnagram (string1, string2) {
   return true;
 }
 
-function strToCharMap (str) {
+function strToCharMap(str) {
   const charsMap = {};
 
   for (const char of str.replace(/[^\w]/g, '').toLowerCase()) {
@@ -37,20 +38,83 @@ function strToCharMap (str) {
 
   return charsMap;
 }
-*/
 
-function isAnagram(str1, str2) {
+let result1 = isAnagram1('RAIL! SAFETY!', 'fairy tales');
+console.log(result1);
+
+/********************************/
+
+function isAnagram2(str1, str2) {
   return cleanString(str1) === cleanString(str2);
 }
 
 function cleanString(str) {
   return str
-          .replace(/[^\w]/g, '')
-          .toLowerCase()
-          .split('')
-          .sort()
-          .join();
+    .replace(/[^\w]/g, '')
+    .toLowerCase()
+    .split('')
+    .sort()
+    .join('');
 }
 
-let result = isAnagram('RAIL! SAFETY!', 'fairy tales');
+let result2 = isAnagram2('RAIL! SAFETY!', 'fairy tales');
+console.log(result2);
+
+/*******************************/
+
+const words = ['dell', 'ledl', 'abc', 'cba', 'monk', 'konm'];
+
+function anagrams(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let word = arr[i];
+    let alphabeticalSort = word
+      .split('')
+      .sort()
+      .join('');
+
+    for (let j = 0; j < arr.length; j++) {
+      if (i === j) {
+        continue;
+      }
+
+      let other = arr[j];
+      if (
+        alphabeticalSort ===
+        other
+          .split('')
+          .sort()
+          .join('')
+      ) {
+        console.log(word + ' - ' + other);
+      }
+    }
+  }
+}
+
+let result = anagrams(words);
 console.log(result);
+
+/********************************/
+
+function sortStrChars(str) {
+  if (!str) return;
+  return str
+    .split('')
+    .sort()
+    .join('');
+}
+
+function getGroupedAnagrams(arr) {
+  const anagrams = {};
+  arr.forEach(word => {
+    const sortedWord = sortStrChars(word);
+    if (anagrams[sortedWord]) {
+      return anagrams[sortedWord].push(word);
+    }
+    anagrams[sortedWord] = [word];
+  });
+  return anagrams;
+}
+
+const groupedAnagrams = getGroupedAnagrams(words);
+console.log(groupedAnagrams);
