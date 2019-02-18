@@ -24,7 +24,6 @@
   3. Return the reversed string
 */
 
-/*
 function reverseString(str) {
   let reversedString = '';
 
@@ -41,7 +40,6 @@ function reverseString(str) {
 
 const result = reverseString('Apple');
 console.log(result);
-*/
 
 /*---- Inbuilt methods ----*/
 
@@ -117,7 +115,6 @@ console.log(result);
    Given a string, return a new string with the reversed order of words
 */
 
-
 function reverseWords(str) {
   let arrOfWords = [];
   let arrOfReversedWords = [];
@@ -134,17 +131,16 @@ function reverseWords(str) {
     arrOfReversedWords.push(reversedWord);
   }
 
-  arrOfWords.forEach(word => {
-    let reversedWord = '';
-    for (let i = word.length - 1; i >= 0; i--) {
-      reversedWord += word[i];
-    }
-    arrOfReversedWords.push(reversedWord);
-  });
+  // arrOfWords.forEach(word => {
+  //   let reversedWord = '';
+  //   for (let i = word.length - 1; i >= 0; i--) {
+  //     reversedWord += word[i];
+  //   }
+  //   arrOfReversedWords.push(reversedWord);
+  // });
 
   return reversedWordsString = arrOfReversedWords.join(' ');
-
 }
 
-const result = reverseWords('Apple from the Heaven');
-console.log(result);
+const reversedString = reverseWords('Apple from the Heaven');
+console.log(reversedString);

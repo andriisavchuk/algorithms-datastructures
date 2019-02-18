@@ -9,7 +9,7 @@
     palindrome("abcdefg") === false
 */
 
-/*
+
 function isPalindrome(str) {
   let reversedString = '';
 
@@ -21,12 +21,12 @@ function isPalindrome(str) {
     reversedString = char + reversedString;
   }
 
-  return reversedString === str ? true : false;
+  return reversedString === str;
 }
 
 let result = isPalindrome('abba');
 console.log(result);
-*/
+
 
 /*
 function isPalindrome(str) {
@@ -53,7 +53,7 @@ let result = isPalindrome('abbart');
 console.log(result);
 */
 
-
+/*
 function isPalindrome(str) {
   let charArray = [];
   let lettersArray = [];
@@ -76,3 +76,4 @@ function isPalindrome(str) {
 
 let result = isPalindrome('Madam I`m Adam');
 console.log(result);
+*/

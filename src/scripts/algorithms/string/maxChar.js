@@ -6,14 +6,13 @@
    maxChar("abg 12311111111") === "1"
 */
 
-/*
+
 function maxChar(str) {
   let chars = {};
   let maxValue = 0;
   let maxChar = '';
 
   for (const char of str) {
-
     if (!chars[char]) {
       chars[char] = 1;
     } else {
@@ -29,9 +28,10 @@ function maxChar(str) {
   }
 
   return maxChar;
-
 }
-*/
+
+let result = maxChar("abccbaffxccsssfxffgf");
+console.log(`Maximum chars in string have ${result}`);
 
 /*
 // is question about proper work of this solution

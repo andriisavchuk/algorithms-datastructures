@@ -8,11 +8,11 @@ function countVowels(str) {
   let vowels = ['a', 'i', 'e', 'o', 'u'];
   let count = 0;
 
-  let sArray = str.toLowerCase().split('');
+  let arrayFromString = str.toLowerCase().split('');
 
-  for (let i = 0; i < sArray.length; i++) {
+  for (let i = 0; i < arrayFromString.length; i++) {
     for (let j = 0; j < vowels.length; j++) {
-      if (sArray[i] === vowels[j]) {
+      if (arrayFromString[i] === vowels[j]) {
         count++;
       }
     }
