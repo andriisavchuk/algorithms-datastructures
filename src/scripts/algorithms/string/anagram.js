@@ -42,8 +42,7 @@ function strToCharMap(str) {
 let result1 = isAnagram1('RAIL! SAFETY!', 'fairy tales');
 console.log(result1);
 
-/********************************/
-
+/*
 function isAnagram2(str1, str2) {
   return cleanString(str1) === cleanString(str2);
 }
@@ -60,7 +59,7 @@ function cleanString(str) {
 let result2 = isAnagram2('RAIL! SAFETY!', 'fairy tales');
 console.log(result2);
 
-/*******************************/
+/---------------------------------------------/
 
 const words = ['dell', 'ledl', 'abc', 'cba', 'monk', 'konm'];
 
@@ -94,8 +93,6 @@ function anagrams(arr) {
 let result = anagrams(words);
 console.log(result);
 
-/********************************/
-
 function sortStrChars(str) {
   if (!str) return;
   return str
@@ -118,3 +115,4 @@ function getGroupedAnagrams(arr) {
 
 const groupedAnagrams = getGroupedAnagrams(words);
 console.log(groupedAnagrams);
+*/

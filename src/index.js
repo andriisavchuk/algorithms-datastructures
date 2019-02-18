@@ -5,4 +5,4 @@ import './index.sass';
 
 // import './scripts/algorithms/math/sumArrayElements';
 
-import './scripts/algorithms/string/anagram';
+import './scripts/algorithms/string/capitalize';

@@ -6,27 +6,31 @@
 */
 
 function capitalizeStr (str) {
-  // let newStr = '';
-  // let wordsArray = [];
+/*
+  let newStr = '';
+  let wordsArray = [];
 
-  // wordsArray = str.split(' ');
+  wordsArray = str.split(' ');
 
-  // for (let i = 0; i < wordsArray.length; i++) {
-  //   let word = wordsArray[i];
-  //   let newWord = '';
-  //   newWord = word[0].toUpperCase() + word.slice(1);
-  //   newStr += newWord + ' ';
-  // }
+  for (let i = 0; i < wordsArray.length; i++) {
+    let word = wordsArray[i];
+    let newWord = '';
+    newWord = word[0].toUpperCase() + word.slice(1);
+    newStr += newWord + ' ';
+  }
 
-  // return newStr;
+  return newStr;
+*/
 
-  // let wordsArray = [];
+/*
+  let wordsArray = [];
 
-  // for (let word of str.split(' ')) {
-  //   wordsArray.push(word[0].toUpperCase() + word.slice(1));
-  // }
+  for (let word of str.split(' ')) {
+    wordsArray.push(word[0].toUpperCase() + word.slice(1));
+  }
 
-  // return words.join(' ');
+  return words.join(' ');
+*/
 
   let newStr = str[0].toUpperCase();
 
