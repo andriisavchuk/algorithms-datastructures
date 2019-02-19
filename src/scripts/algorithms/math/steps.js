@@ -10,7 +10,7 @@
     steps(3)
       '#  '
       '## '
-       '###'
+      '###'
 */
 
 function steps(n) {
@@ -30,5 +30,29 @@ function steps(n) {
   }
 }
 
-let result = steps(10);
+let result = steps(5);
 console.log(result);
+
+/* Recursive solution */
+
+function stepsRecursive(n, row = 0, steps = '') {
+  if (n === row){
+    return;
+  }
+
+  if (n === steps.length) {
+    console.log(steps);
+    return stepsRecursive(n, row + 1);
+  }
+
+  if (steps.length <= row) {
+    steps += '#';
+  } else {
+    steps += ' ';
+  }
+
+  stepsRecursive(n, row, steps);
+}
+
+let result2 = stepsRecursive(5);
+console.log(result2);
