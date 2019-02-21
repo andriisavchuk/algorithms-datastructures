@@ -20,7 +20,7 @@ function countVowels(str) {
   return count;
 }
 
-console.log(countVowels('Hello Worldik'));
+console.log(`There are ${countVowels('Hello Andrii')} vowels in the string`);
 
 /*------------------------------*/
 
@@ -37,6 +37,9 @@ function countVowels2(str) {
   return vowels;
 }
 
+let result = countVowels3("Hello friend");
+console.log(result);
+
 /*------------------------------*/
 
 function countVowels3(str) {
@@ -45,5 +48,5 @@ function countVowels3(str) {
   return `There are ${count} vowels in the string.`;
 }
 
-let result = countVowels("Hello friend");
-console.log(result);
+let result2 = countVowels3("Hello friend. How are you?");
+console.log(result2);
