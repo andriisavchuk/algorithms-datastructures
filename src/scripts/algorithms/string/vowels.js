@@ -22,8 +22,9 @@ function countVowels(str) {
 
 console.log(countVowels('Hello Worldik'));
 
-/*
-function countVowels(str) {
+/*------------------------------*/
+
+function countVowels2(str) {
   let vowels = 0;
   const vowelsArray = ['a', 'e', 'i', 'o', 'u'];
 
@@ -35,10 +36,10 @@ function countVowels(str) {
 
   return vowels;
 }
-*/
 
-/*
-function countVowels(str) {
+/*------------------------------*/
+
+function countVowels3(str) {
   const vowels = str.match(/[aeiou]/gi);
   let count = vowels.length;
   return `There are ${count} vowels in the string.`;
@@ -46,4 +47,3 @@ function countVowels(str) {
 
 let result = countVowels("Hello friend");
 console.log(result);
-*/
