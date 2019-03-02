@@ -19,8 +19,10 @@ function fibonacci(n) {
 let result = fibonacci(10);
 console.log(result);
 
+/* Recursive solution. O(2 ^ n) an exponential runtime complexity */
+
 function fibRecursive(n) {
-  if (n <= 2) {
+  if (n < 2) {
     return 2;
   }
 
