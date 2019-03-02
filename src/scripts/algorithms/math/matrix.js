@@ -52,5 +52,5 @@ function spiralMatrix(n) {
   return matrix;
 }
 
-let result = spiralMatrix(3);
+let result = spiralMatrix(4);
 console.log(result);
