@@ -13,6 +13,7 @@ function fibonacci(n) {
     fibArray.push(a + b);
   }
 
+  console.log(fibArray[n]);
   return fibArray;
 }
 
@@ -21,6 +22,7 @@ console.log(result);
 
 /* Recursive solution. O(2 ^ n) an exponential runtime complexity */
 
+/* Sum on numbers in Fibonacci sequence */
 function fibRecursive(n) {
   if (n < 2) {
     return 2;
@@ -31,3 +33,12 @@ function fibRecursive(n) {
 
 let result2 = fibRecursive(10);
 console.log(result2);
+
+/* Number in a specific position of Fibonacci sequence */
+function fibonacciNumber(position) {
+  if (position < 3) return 1;
+  else  return fibonacciNumber(position - 1) + fibonacciNumber(position - 2);
+}
+
+const result3 = fibonacciNumber(10);
+console.log(result3);
