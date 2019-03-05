@@ -13,16 +13,16 @@ function fibonacci(n) {
     fibArray.push(a + b);
   }
 
-  console.log(fibArray[n]);
+  // console.log(fibArray[n]);
   return fibArray;
 }
 
-let result = fibonacci(10);
+const result = fibonacci(10);
 console.log(result);
 
 /* Recursive solution. O(2 ^ n) an exponential runtime complexity */
 
-/* Sum on numbers in Fibonacci sequence */
+// Sum on numbers in Fibonacci sequence
 function fibRecursive(n) {
   if (n < 2) {
     return 2;
@@ -31,14 +31,42 @@ function fibRecursive(n) {
   return fibRecursive(n - 1) + fibRecursive(n - 2);
 }
 
-let result2 = fibRecursive(10);
+const result2 = fibRecursive(10);
 console.log(result2);
 
-/* Number in a specific position of Fibonacci sequence */
+// Number in a specific position of Fibonacci sequence
 function fibonacciNumber(position) {
   if (position < 3) return 1;
-  else  return fibonacciNumber(position - 1) + fibonacciNumber(position - 2);
+  else return fibonacciNumber(position - 1) + fibonacciNumber(position - 2);
 }
 
 const result3 = fibonacciNumber(10);
 console.log(result3);
+
+/* Improved recursive algorithm with memoization method
+  index - position of the number in sequence
+  cache array used as memory to store calculated number in a position
+
+  - check if number is already exist in cache
+  - if is - use that number
+  - if not - calculate and save to cache
+*/
+
+function memoizeFibonacci(index, cache) {
+  cache = cache || [];
+  //check if number is already exist in cache
+  if (cache[index]) {
+    return cache[index];
+  } else {
+    if (index < 3) return 1;
+    else {
+      cache[index] =
+        memoizeFibonacci(index - 1, cache) + memoizeFibonacci(index - 2, cache);
+    }
+  }
+
+  return cache[index];
+}
+
+const result4 = memoizeFibonacci(10);
+console.log(result4);
