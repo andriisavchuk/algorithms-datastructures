@@ -10,7 +10,54 @@
     anagrams('Hi there', 'Bye there') --> False
 */
 
-function isAnagram1(str1, str2) {
+/* Utilize inbuilt methods */
+
+let str1 = 'rAIl safety';
+let str2 = 'fairy Tales';
+
+function isAnagram1() {
+  let sortedStr1 = str1
+    .toLowerCase()
+    .split('')
+    .sort()
+    .join('');
+
+  let sortedStr2 = str2
+    .toLowerCase()
+    .split('')
+    .sort()
+    .join('');
+
+  return sortedStr1 === sortedStr2;
+}
+
+const result = isAnagram1(str1, str2);
+console.log(result);
+
+/*
+  Utilize replace() method inside helper function with RegEx
+  pattern to consider only letters in strings
+*/
+
+function isAnagram2(str1, str2) {
+  return cleanString(str1) === cleanString(str2);
+}
+
+function cleanString(str) {
+  return str
+    .replace(/[^\w]/g, '')
+    .toLowerCase()
+    .split('')
+    .sort()
+    .join('');
+}
+
+let result2 = isAnagram2('RAIL! SAFETY!', 'fairy tales');
+console.log(result2);
+
+/*--------------------------------------*/
+
+function isAnagram3(str1, str2) {
   const charsMapOfStr1 = strToCharMap(str1);
   const charsMapOfStr2 = strToCharMap(str2);
 
@@ -39,27 +86,10 @@ function strToCharMap(str) {
   return charsMap;
 }
 
-let result1 = isAnagram1('RAIL! SAFETY!', 'fairy tales');
+let result1 = isAnagram3('RAIL! SAFETY!', 'fairy tales');
 console.log(result1);
 
-/*
-function isAnagram2(str1, str2) {
-  return cleanString(str1) === cleanString(str2);
-}
-
-function cleanString(str) {
-  return str
-    .replace(/[^\w]/g, '')
-    .toLowerCase()
-    .split('')
-    .sort()
-    .join('');
-}
-
-let result2 = isAnagram2('RAIL! SAFETY!', 'fairy tales');
-console.log(result2);
-
-/---------------------------------------------/
+/*--------------------------------------*/
 
 const words = ['dell', 'ledl', 'abc', 'cba', 'monk', 'konm'];
 
@@ -90,8 +120,10 @@ function anagrams(arr) {
   }
 }
 
-let result = anagrams(words);
-console.log(result);
+// let result = anagrams(words);
+// console.log(result);
+
+/*--------------------------------------*/
 
 function sortStrChars(str) {
   if (!str) return;
@@ -113,6 +145,5 @@ function getGroupedAnagrams(arr) {
   return anagrams;
 }
 
-const groupedAnagrams = getGroupedAnagrams(words);
-console.log(groupedAnagrams);
-*/
+// const groupedAnagrams = getGroupedAnagrams(words);
+// console.log(groupedAnagrams);
