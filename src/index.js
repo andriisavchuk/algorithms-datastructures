@@ -5,4 +5,4 @@ import './index.sass';
 
 // import './scripts/algorithms/math/fibonacci';
 
-import './scripts/algorithms/string/capitalize';
+import './scripts/algorithms/string/maxChar';
