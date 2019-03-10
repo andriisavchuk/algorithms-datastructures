@@ -95,9 +95,13 @@ function binarySearch(array, key) {
 // Big O Notation: 'O(n*log(n))'
 
 
+// Exponential runtime (recursive fibonacci solution)
+// Big O Notation: 'O(2^n)'
 
-
-
+function fibonacci(n) {
+  if (n < 2) return 2;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
 
 
 
