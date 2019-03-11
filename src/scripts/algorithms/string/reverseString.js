@@ -43,8 +43,7 @@ console.log(result);
 
 /*---- Inbuilt methods ----*/
 
-/*
-function reverseString(str) {
+function reverseString2(str) {
   let arrayOfWords = [];
   let reversedString = '';
 
@@ -55,40 +54,36 @@ function reverseString(str) {
   return reversedString;
 }
 
-const result = reverseString('Apple from the Heaven');
-console.log(result);
+const result2 = reverseString2('Apple from the Heaven');
+console.log(result2);
 
+/*-------------------------*/
 
-function reverseString(str) {
+function reverseString3(str) {
   return str.split('').reverse().join('');
 }
 
-const result = reverseString('Apple from the Heaven');
-console.log(result);
-*/
+const result3 = reverseString3('Apple from the Heaven');
+console.log(result3);
 
 /*---- ES6 Reduce method ----*/
 
-/*
-function reverseString(str) {
+function reverseString4(str) {
   return str.split('').reduce((reversed, char) => char + reversed, '');
 }
 
-let result = reverseString('hello world');
-console.log(result);
-*/
+let result4 = reverseString4('hello world');
+console.log(result4);
 
 /*---- Recursion ----*/
 
-/*
-function reverseString(str) {
+function reverseStringRecursive(str) {
   if (str === '') return '';
   return reverseString(str.substring(1)) + str.charAt(0);
 }
 
-const result = reverseString('Apple from the Heaven');
-console.log(result);
-*/
+const result5 = reverseStringRecursive('Apple from the Heaven');
+console.log(result5);
 
 /*
   First Part of the recursion method
