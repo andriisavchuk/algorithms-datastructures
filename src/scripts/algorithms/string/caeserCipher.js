@@ -27,7 +27,7 @@ function caeserCipher(str, num) {
     }
   }
 
-   return shiftedStr;
+  return shiftedStr;
 }
 
 // const result = caeserCipher('zoo Keeper', 2);

@@ -13,7 +13,7 @@ function fibonacci(n) {
     fibArray.push(a + b);
   }
 
-  // console.log(fibArray[n]);
+  console.log(fibArray[n]);
   return fibArray;
 }
 
@@ -34,7 +34,7 @@ function fibRecursive(n) {
 const result2 = fibRecursive(10);
 console.log(result2);
 
-// Number in a specific position of Fibonacci sequence
+// Number in a specific position of Fibonacci sequence. 0 included
 function fibonacciNumber(position) {
   if (position < 3) return 1;
   else return fibonacciNumber(position - 1) + fibonacciNumber(position - 2);
