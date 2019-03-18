@@ -3,7 +3,10 @@
   Examples
     capitalize('that challenge looks great!') --> 'That Challenge Looks Great '
 */
-
+/**
+ * @param {string} str
+ * @return {string}
+ */
 function capitalizeStr(str) {
   let newStr = '';
   let wordsArray = str.split(' ');

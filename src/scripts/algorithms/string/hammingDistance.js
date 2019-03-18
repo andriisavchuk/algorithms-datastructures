@@ -7,7 +7,11 @@
   the Hamming distance is one of several string metrics for measuring the edit
   distance between two sequences.
 */
-
+/**
+ * @param {string} str1
+ * @param {string} str2
+ * @return {number}
+ */
 function hammingDistance(str1, str2) {
   let distance = 0;
 

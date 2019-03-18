@@ -3,7 +3,11 @@
   'shifted' a certain number of places down the alphabet. For example,
   with a shift of 1, A would be replaced by B, B would become C, and so on.
 */
-
+/**
+ * @param {string} str
+ * @param {number} num
+ * @return {string}
+ */
 function caeserCipher(str, num) {
   num = num % 26; // if num > 26 or < -26 module the num
   let alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];

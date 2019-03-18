@@ -8,7 +8,10 @@
     palindrome("abba") === true
     palindrome("abcdefg") === false
 */
-
+/**
+ * @param {string} str
+ * @return {boolean}
+ */
 function isPalindrome(str) {
   let reversedString = '';
 

@@ -3,7 +3,10 @@
   Examples:
     countVowels('Hello friend!'); --> 4
 */
-
+/**
+ * @param {string} str
+ * @return {number}
+ */
 function countVowels(str) {
   let vowels = ['a', 'i', 'e', 'o', 'u'];
   let count = 0;

@@ -4,7 +4,11 @@
   with the message formed from words or letters cut randomly from
   a magazine or newspaper in order to avoid using recognizable handwriting.
 */
-
+/**
+ * @param {string} noteText
+ * @param {string} magazineText
+ * @return {boolean}
+ */
 function ransomNote(noteText, magazineText) {
   let isNotePossible = true;
   let noteTextArray = noteText.split(' ');

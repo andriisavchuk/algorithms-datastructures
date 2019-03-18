@@ -23,7 +23,10 @@
 
   3. Return the reversed string
 */
-
+/**
+ * @param {string} str
+ * @return {string}
+ */
 function reverseString(str) {
   let reversedString = '';
 

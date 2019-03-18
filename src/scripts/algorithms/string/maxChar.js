@@ -5,7 +5,10 @@
    maxChar("abccccccba") === "c"
    maxChar("abg 12311111111") === "1"
 */
-
+/**
+ * @param {string} str
+ * @return {string}
+ */
 
 function maxChar(str) {
   let chars = {};

@@ -15,7 +15,12 @@
 let str1 = 'rAIl safety';
 let str2 = 'fairy Tales';
 
-function isAnagram1() {
+/**
+ * @param {string} str1
+ * @param {string} str2
+ * @return {boolean}
+ */
+function isAnagram1(str1, str2) {
   let sortedStr1 = str1
     .toLowerCase()
     .split('')
