@@ -75,7 +75,7 @@ function reverseString4(str) {
   return str.split('').reduce((reversed, char) => char + reversed, '');
 }
 
-let result4 = reverseString4('hello world');
+const result4 = reverseString4('hello world');
 console.log(result4);
 
 /*---- Recursion ----*/

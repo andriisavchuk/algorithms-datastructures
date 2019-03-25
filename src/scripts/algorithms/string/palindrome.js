@@ -26,7 +26,7 @@ function isPalindrome(str) {
   return reversedString === str;
 }
 
-let result = isPalindrome('abba');
+const result = isPalindrome('abba');
 console.log(result);
 
 /*------------------------------*/
@@ -40,7 +40,7 @@ function isPalindrome2(str) {
   return reversedString === str;
 }
 
-let result2 = isPalindrome2('abba');
+const result2 = isPalindrome2('abba');
 console.log(result2);
 
 /*------------------------------*/
@@ -51,7 +51,7 @@ function isPalindrome3(str) {
   });
 }
 
-let result3 = isPalindrome3('abbart');
+const result3 = isPalindrome3('abbart');
 console.log(result3);
 
 /*------------------------------*/
@@ -71,5 +71,5 @@ function isPalindrome4(str) {
   return lettersArray.join('') === lettersArray.reverse().join('');
 }
 
-let result4 = isPalindrome4('Madam I`m Adam');
+const result4 = isPalindrome4('Madam I`m Adam');
 console.log(result4);

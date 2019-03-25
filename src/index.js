@@ -5,4 +5,4 @@ import './index.sass';
 
 // import './scripts/algorithms/math/fibonacci';
 
-import './scripts/algorithms/string/hammingDistance';
+import './scripts/algorithms/string/levensteinDistance';

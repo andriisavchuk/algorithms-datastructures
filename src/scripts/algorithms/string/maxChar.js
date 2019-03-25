@@ -33,7 +33,7 @@ function maxChar(str) {
   return maxChar;
 }
 
-let result = maxChar("abccbaffxccsssfxffgf");
+const result = maxChar("abccbaffxccsssfxffgf");
 console.log(`Maximum chars in string have ${result}`);
 
 /*
@@ -52,6 +52,6 @@ function maxChar(str) {
   return maxValue;
 }
 
-let result = maxChar("abccbaffxccsssfxffgf");
+const result = maxChar("abccbaffxccsssfxffgf");
 console.log(`Maximum chars in string have ${result}`);
 */

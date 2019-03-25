@@ -28,5 +28,5 @@ function replaceLetters(str) {
   return newString;
 }
 
-let result = replaceLetters(`Let's have some fun`);
+const result = replaceLetters(`Let's have some fun`);
 console.log(result);

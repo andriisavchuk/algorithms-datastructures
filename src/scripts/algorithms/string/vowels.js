@@ -40,7 +40,7 @@ function countVowels2(str) {
   return vowels;
 }
 
-let result = countVowels3("Hello friend");
+const result = countVowels3("Hello friend");
 console.log(result);
 
 /*------------------------------*/
@@ -51,5 +51,5 @@ function countVowels3(str) {
   return `There are ${count} vowels in the string.`;
 }
 
-let result2 = countVowels3("Hello friend. How are you?");
+const result2 = countVowels3("Hello friend. How are you?");
 console.log(result2);

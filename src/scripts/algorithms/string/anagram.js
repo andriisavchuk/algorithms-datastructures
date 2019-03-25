@@ -57,7 +57,7 @@ function cleanString(str) {
     .join('');
 }
 
-let result2 = isAnagram2('RAIL! SAFETY!', 'fairy tales');
+const result2 = isAnagram2('RAIL! SAFETY!', 'fairy tales');
 console.log(result2);
 
 /*--------------------------------------*/
@@ -91,7 +91,7 @@ function strToCharMap(str) {
   return charsMap;
 }
 
-let result1 = isAnagram3('RAIL! SAFETY!', 'fairy tales');
+const result1 = isAnagram3('RAIL! SAFETY!', 'fairy tales');
 console.log(result1);
 
 /*--------------------------------------*/
@@ -125,7 +125,7 @@ function anagrams(arr) {
   }
 }
 
-// let result = anagrams(words);
+// const result = anagrams(words);
 // console.log(result);
 
 /*--------------------------------------*/
