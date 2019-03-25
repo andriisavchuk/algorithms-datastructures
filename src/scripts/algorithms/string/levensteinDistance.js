@@ -1,6 +1,5 @@
-/* Taken from https://github.com/trekhleb/javascript-algorithms */
-
 /**
+ * @see https://github.com/trekhleb/javascript-algorithms
  * @param {string} str1
  * @param {string} str2
  * @return {number}
