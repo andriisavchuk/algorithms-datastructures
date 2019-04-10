@@ -82,7 +82,7 @@ console.log(result4);
 
 function reverseStringRecursive(str) {
   if (str === '') return '';
-  return reverseString(str.substring(1)) + str.charAt(0);
+  return reverseStringRecursive(str.substring(1)) + str.charAt(0);
 }
 
 const result5 = reverseStringRecursive('Apple from the Heaven');
