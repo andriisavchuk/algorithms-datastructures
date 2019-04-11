@@ -30,13 +30,13 @@
 function reverseString(str) {
   let reversedString = '';
 
-  // for (let i = str.length - 1; i >= 0; i--) {
-  //   //   reversedString += str[i].toLowerCase();
-  //   // }
-
-  for (let char of str) {
-    reversedString = char + reversedString;
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedString += str[i].toLowerCase();
   }
+
+  // for (let char of str) {
+  //   reversedString = char + reversedString;
+  // }
 
   return reversedString;
 }
@@ -45,22 +45,6 @@ const result = reverseString('Apple');
 console.log(result);
 
 /*---- Inbuilt methods ----*/
-
-function reverseString2(str) {
-  let arrayOfWords = [];
-  let reversedString = '';
-
-  arrayOfWords = str.split('');
-  arrayOfWords.reverse();
-  reversedString = arrayOfWords.join('');
-
-  return reversedString;
-}
-
-const result2 = reverseString2('Apple from the Heaven');
-console.log(result2);
-
-/*-------------------------*/
 
 function reverseString3(str) {
   return str.split('').reverse().join('');
@@ -125,7 +109,6 @@ function reverseWords(str) {
     for (let i = word.length - 1; i >= 0 ; i--) {
       reversedWord += word[i];
     }
-
     arrOfReversedWords.push(reversedWord);
   }
 
