@@ -1,39 +1,34 @@
-const path = require("path");
+const path = require('path');
 
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const WriteFilePlugin = require('write-file-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
-  entry: "./src/index.js",
+  mode: 'development',
+  entry: {
+    main: './src/index.js',
+    vendor: './src/vendor.js'
+  },
   module: {
     rules: [
       {
         test: /\.txt$/,
-        use: "raw-loader"
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
-            options: {
-              minimize: true
-            }
-          }
-        ]
+        use: 'raw-loader'
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              name: "[name].[ext]",
-              outputPath: "images/",
-              publicPath: "images/"
+              esModule: false,
+              name: '[name].[ext]',
+              outputPath: 'images/',
+              publicPath: '/images/'
             }
           }
         ]
@@ -42,35 +37,12 @@ module.exports = {
         test: /\.(woff|woff2|ttf|otf)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              name: "[name].[ext]",
-              outputPath: "fonts/",
-              publicPath: "fonts/"
-            }
-          }
-        ]
-      },
-      {
-        test: /\.(sa|sc|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true
+              esModule: false,
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+              publicPath: 'fonts/'
             }
           }
         ]
@@ -79,35 +51,50 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
         }
       }
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(["dist"]),
+    new CleanWebpackPlugin(),
+    new WriteFilePlugin(),
+    new CopyPlugin([
+      {
+        from: path.resolve(__dirname, 'src', 'robots.txt'),
+        to: path.resolve(__dirname, 'dist', 'robots.txt')
+      }
+    ]),
     new HtmlWebpackPlugin({
-      title: "tris-webpack-boilerplate",
-      filename: "index.html",
-      template: "./src/index.html",
-      inject: "head"
+      title: 'tris-home-page',
+      filename: 'index.html',
+      template: './src/index.html',
+      inject: 'head'
     }),
     new HtmlWebpackPlugin({
-      title: "tris-404-page",
-      filename: "404.html",
-      template: "./src/404.html",
-      inject: "head"
+      title: 'tris-404-page',
+      filename: '404.html',
+      template: './src/404.html',
+      inject: 'head'
+    }),
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      as(entry) {
+        if (/\.(woff|woff2|ttf|otf)$/.test(entry)) return 'font';
+      },
+      fileWhitelist: [/\.(woff|woff2|ttf|otf)$/],
+      include: 'allAssets'
     }),
     new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: "defer"
-    }),
-    new MiniCssExtractPlugin({
-      filename: "webpack-bundle.css",
-      chunkFilename: "[id].css"
+      defaultAttribute: 'defer'
     })
   ],
-  output: {
-    filename: "webpack-bundle.js",
-    path: path.resolve(__dirname, "dist")
+  externals: {
+    $: 'jquery',
+    jquery: 'jQuery',
+    'window.$': 'jquery'
   }
 };
