@@ -51,8 +51,8 @@ function reverseString3(str) {
     .join('')
 }
 
-const result3 = reverseString3('Apple from the Heaven')
-console.log(result3)
+// const result = reverseString3('Apple from the Heaven')
+// console.log(result)
 
 /*---- ES6 Reduce method ----*/
 
@@ -60,8 +60,8 @@ function reverseString4(str) {
   return str.split('').reduce((reversed, char) => char + reversed, '')
 }
 
-const result4 = reverseString4('hello world')
-console.log(result4)
+// const result = reverseString4('hello world')
+// console.log(result)
 
 /*---- Recursion ----*/
 
@@ -70,8 +70,8 @@ function reverseStringRecursive(str) {
   return reverseStringRecursive(str.substring(1)) + str.charAt(0)
 }
 
-const result5 = reverseStringRecursive('Apple from the Heaven')
-console.log(result5)
+// const result = reverseStringRecursive('Apple from the Heaven')
+// console.log(result)
 
 /*
   First Part of the recursion method
