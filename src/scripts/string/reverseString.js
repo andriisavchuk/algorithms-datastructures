@@ -1,4 +1,4 @@
-/* eslint-disable spaced-comment,no-plusplus,no-console,no-unused-vars,no-restricted-syntax */
+/* eslint-disable spaced-comment,no-plusplus,no-console,no-unused-vars,no-restricted-syntax,prefer-destructuring */
 /*
   Given a string, return a new string with the reversed order of characters
   Example reverse('apple') === 'leppa'
@@ -39,16 +39,13 @@ function reverseString(str) {
   return reversedString
 }
 
-const result = reverseString('Apple')
-console.log(result)
+// const result = reverseString('Apple')
+// console.log(result)
 
 /*---- Inbuilt methods ----*/
 
 function reverseString3(str) {
-  return str
-    .split('')
-    .reverse()
-    .join('')
+  return str.split('').reverse().join('')
 }
 
 // const result = reverseString3('Apple from the Heaven')
@@ -125,5 +122,44 @@ function reverseWords(str) {
   return reversedWordsString
 }
 
-const reversedString = reverseWords('Apple from the Heaven')
-console.log(reversedString)
+// const reversedString = reverseWords('Apple from the Heaven')
+// console.log(reversedString)
+
+/*
+  Given a string, return a new string with the reversed order of vowels characters
+  Example reverse('apple') === 'eppla'
+*/
+
+function isVowel(character) {
+  const arrOfVowels = ['a', 'e', 'i', 'o', 'u', 'y']
+  return arrOfVowels.some(vowel => character === vowel)
+}
+
+function reverseVowelsInString(str) {
+  let reversedString = ''
+  const symbolToBeReplacedForVowel = '-'
+  const arrOfVowelsFromString = []
+  const arrFromString = str.split('')
+
+  for (let i = 0; i < arrFromString.length; i++) {
+    if (isVowel(arrFromString[i])) {
+      arrOfVowelsFromString.push(arrFromString[i])
+      arrFromString[i] = symbolToBeReplacedForVowel
+    }
+  }
+
+  arrOfVowelsFromString.reverse()
+
+  for (let i = 0; i < arrFromString.length; i++) {
+    if (arrFromString[i] === '-') {
+      arrFromString[i] = arrOfVowelsFromString[0]
+      arrOfVowelsFromString.shift()
+    }
+  }
+
+  reversedString = arrFromString.join('')
+  return reversedString
+}
+
+const reveredVowelsString = reverseVowelsInString('underground')
+console.log(reveredVowelsString)
