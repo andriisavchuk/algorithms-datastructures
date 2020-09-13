@@ -10,14 +10,14 @@ function reverseInteger(n) {
     .toString()
     .split('')
     .reverse()
-    .join('');
+    .join('')
 
   // if (n < 0) {
   //   return parseInt(reversedNumber) * -1;
   // }
 
-  return parseInt(reversedNumber) * Math.sign(n);
+  return parseInt(reversedNumber) * Math.sign(n)
 }
 
-const result = reverseInteger(-51);
-console.log(result);
+const result = reverseInteger(-51)
+console.log(result)
