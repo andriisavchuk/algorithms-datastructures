@@ -1,4 +1,4 @@
-# Algorithms and DataStructures
+# Algorithms and Data Structures with JS Reference
 
 # Usage
 
