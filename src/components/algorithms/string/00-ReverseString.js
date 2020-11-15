@@ -1,9 +1,9 @@
 /*
   Given a string, return a new string with the reversed order of characters
-  Example reverse('apple') === 'leppa'
+  Example reverseString('apple') === 'leppa'
 */
 
-const ReverseString = async () => {
+const ReverseString = () => {
   /*---- For loop ----*/
 
   // function reverseString(str) {

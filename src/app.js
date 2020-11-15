@@ -1,12 +1,12 @@
 import Header from './components/Header'
-import ReverseString from './components/algorithms/string/00-ReverseString'
+import ReverseVowels from './components/algorithms/string/02-ReverseVowels'
 
 async function App() {
   const template = document.createElement('template')
   template.innerHTML = `
     <div class="container">
       ${Header()}
-      ${await ReverseString()}
+      ${ReverseVowels()}
     </div>
   `
   // Return a new node from template
