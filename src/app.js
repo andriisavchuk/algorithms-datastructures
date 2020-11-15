@@ -1,12 +1,12 @@
 import Header from './components/Header'
-import ReverseNumber from './components/algorithms/number/02-ReverseNumber'
+import MaxChar from './components/algorithms/string/04-MaxChar'
 
 async function App() {
   const template = document.createElement('template')
   template.innerHTML = `
     <div class="container">
       ${Header()}
-      ${ReverseNumber()}
+      ${MaxChar()}
     </div>
   `
   // Return a new node from template
