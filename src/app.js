@@ -1,13 +1,12 @@
 import Header from './components/Header'
-import ReverseVowels from './components/algorithms/string/02-ReverseVowels'
-import FizzBuzz from './components/algorithms/number/00-FizzBuzz'
+import Palindrome from './components/algorithms/string/03-Palindrome'
 
 async function App() {
   const template = document.createElement('template')
   template.innerHTML = `
     <div class="container">
       ${Header()}
-      ${FizzBuzz()}
+      ${Palindrome()}
     </div>
   `
   // Return a new node from template
