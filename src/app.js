@@ -1,12 +1,12 @@
 import Header from './components/Header'
-import Palindrome from './components/algorithms/string/03-Palindrome'
+import ReverseNumber from './components/algorithms/number/02-ReverseNumber'
 
 async function App() {
   const template = document.createElement('template')
   template.innerHTML = `
     <div class="container">
       ${Header()}
-      ${Palindrome()}
+      ${ReverseNumber()}
     </div>
   `
   // Return a new node from template
